@@ -1,0 +1,173 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+ 
+<section class="change-background-images">
+  <div class="image-overlay">
+      <div class="image-container">
+         <img src="static/media/images/offices.PNG" alt="Offices">
+      </div>
+      <div class="overlay">
+         <h1>Exotic EPZ Limited Headquarters</h1>
+         <p>Located 1.8 km from Prestige Movers Kenya Limited, next to Government of Nairobi County offices.</p>
+      </div>
+  </div>
+</section>
+
+
+<section class="change-background-images">
+  <div class="image-overlay">
+      <div class="image-container">
+          <img src="static/media/images/training.PNG" alt="Processing">
+      </div>
+      <div class="overlay">
+          <h1>Farmers training & sensitization sessions</h1>
+          <p>Spread in over 10 counties.</p>
+      </div>
+  </div>
+</section>
+
+<section class="change-background-images">
+  <div class="image-overlay">
+      <div class="image-container">
+          <img src="static/media/images/premium.PNG" alt="Processing">
+      </div>
+      <div class="overlay">
+          <h1>Discover premium quality macadamia nuts</h1>
+          <p>Nutritious & tasty.</p>
+      </div>
+  </div>
+</section>
+
+
+<section class="change-background-images">
+  <div class="image-overlay">
+      <div class="image-container">
+          <img src="static/media/images/processing.PNG" alt="Processing">
+      </div>
+      <div class="overlay">
+          <h1>Processing of the Nuts</h1>
+          <p>Quality products for healthy and happy living.</p>
+      </div>
+  </div>
+</section>
+
+
+
+<section class="change-background-images">
+  <div class="image-overlay">
+      <div class="image-container">
+          <img src="static/media/images/consumption.PNG" alt="Processing">
+      </div>
+      <div class="overlay">
+          <h1>Responsible consumption and production</h1>
+          <p>With future generations in mind.</p>
+      </div>
+  </div>
+</section>
+
+
+<section class="change-background-images">
+  <div class="image-overlay">
+      <div class="image-container">
+          <img src="static/media/images/assurance.PNG" alt="Processing">
+      </div>
+      <div class="overlay">
+          <h1>Quality assurance</h1>
+          <p>Maintaining high standards of hygiene.</p>
+      </div>
+  </div>
+</section>
+
+
+<section class="change-background-images">
+  <div class="image-overlay">
+      <div class="image-container">
+          <img src="static/media/images/packaging.PNG" alt="Processing">
+      </div>
+      <div class="overlay">
+          <h1>Right packaging</h1>
+          <p>Ready for market.</p>
+      </div>
+  </div>
+</section>
+
+
+
+<style>
+  .change-background-images {
+    display: none;
+    height: 80vh;
+  }
+
+  .image-overlay {
+    position: relative;
+    height: 100%;
+  }
+
+  .image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: show-image 0s 2s forwards;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .overlay {
+      position: absolute;
+      bottom: 0;
+      left: -100%; 
+      width: 100%;
+      height: 100px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #ff9900;
+      padding: 10px;
+      opacity: 0;
+      animation: show-overlay 2s 2s forwards;
+    }
+    
+
+    @keyframes show-overlay {
+      from {
+        left: -100%; 
+        opacity: 1;
+      }
+      to {
+        left: 0; 
+        opacity: 1;
+      }
+    }
+    
+</style>
+
+<script>
+  var sectionIndex = 0;
+  var sections = document.querySelectorAll('section');
+
+  function showNextSection() {
+    sections[sectionIndex].style.display = 'none';
+    sectionIndex = (sectionIndex + 1) % sections.length;
+    sections[sectionIndex].style.display = 'block';
+  }
+
+  // Show the first section initially
+  sections[sectionIndex].style.display = 'block';
+
+  // Call the showNextSection function every 5 seconds
+  setInterval(showNextSection, 10000);
+</script>
+
+{% endblock %}

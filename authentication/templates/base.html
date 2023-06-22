@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="{% static 'media/images/Capture.PNG' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" href="{% static 'media/images/Capture.PNG' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'styles/stylesie.css' %}">
+    <title>Exotic EPZ Limited</title>
+</head>
+<body>
+   
+
+    <!-- PRELOADER -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ball-scale-multiple">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <!-- /.preloader -->
+   
+ 
+   
+    <!-- ................................................Header Start................................................... -->
+    <header class="main-header" style=" background-image: url('static/media/images/logotp.png');">
+        <div class="floatleft">
+            <div class="logo">
+                <img src="static/media/images/logoh.png" alt="">
+            </div>
+            <div class="nav-brand" style="margin-left:-20px;">
+                <strong>
+                    <p>Exotic EPZ</p>
+                    <p>Limited</p>
+                </strong>
+            </div>
+        </div>
+        <div class="nav-main">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">FAQs</a></li>
+                <li><a href="">Our Services</a></li>
+                <li><a href="">Impact</a></li>
+                <li><a href="">Contact Us</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- ................................................Header End................................................... -->
+  
+      
+    <main>
+        {% block content %}
+      
+        Replace Me
+       
+        {% endblock %}
+    </main>
+
+      
+    <footer class="fixed-footer">
+        <div id="footer1">
+            <div class="about-us">
+                <h3>About Us</h3>
+                <p><strong>Motto:</strong><br> Your Success, One Solution at a Time</p>
+                <p><strong>Vision:</strong><br> To be the leading provider of personalized solutions, revolutionizing the way individuals and businesses thrive by delivering exceptional services that address their distinct needs with unparalleled innovation, reliability, and customer satisfaction.</p>
+            </div>
+      
+            <div class="services1">
+               <h3>Quick Links</h3>
+               <ul>
+                    <li>macadamia nuts</li>
+                    <li>quality assurance</li>
+               </ul>
+            </div>
+      
+            <div class="contact-us">
+                <h3>Contact Us</h3>
+                <address>
+                    <p>Road C Off Enterprise Road,</p>
+                    <p>Sameer Industrial Park, UNIT 8,</p>
+                    <p>P.O. Box: 13779-00100,</p>
+                    <p>Nairobi, Kenya.</p>
+                </address>
+                <p>Email: info@exoticepz.co.ke</p>
+                <p>Phone: +254 717 110 580</p>
+                <p>Hours: Available 24/7</p>
+            </div>
+      
+            <div class="social-media">
+                <h3>Let's connect</h3>
+                <ul>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+      
+        <div class="copyright">
+            <p>&copy; 2023 Exotic EPZ Limited | Safety is our priority, Quality is our standard</p><br>
+            <p>Website By: www.hamistechworks.co.ke</p>
+        </div>
+    </footer> 
+      
+</body>
+</html>
